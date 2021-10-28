@@ -1,0 +1,124 @@
+<app-user-info pagina="Formulario"></app-user-info>
+<app-back-page></app-back-page>
+
+<form>
+    <div class="formulario">
+        <h4 class="formulario__desc">Indique los siguientes datos para continuar con la solicitud de su adelanto de pensión:</h4>
+    
+        <label class="formulario__lbl" for="valor">
+            ¿Cuál es el valor total de sus ingresos mensuales?
+        </label>
+        <input 
+            class="formulario__inp" 
+            type="number" name="valor" 
+            autocomplete="off"
+        >
+    
+        <label class="formulario__lbl" for="actividad">
+            ¿Cuál es su actividad laboral actual?
+        </label>
+        <select name="actividad" class="formulario__inp" >
+            <option value="" disabled selected hiden>Seleccione una opción</option>
+            <option value="empleado">Empleado</option>
+            <option value="independiente">Independiente</option>
+        </select>
+    
+        <label class="formulario__lbl" for="empresa">
+            ¿Cuál es el nombre de su empresa?
+        </label>
+        <input 
+            class="formulario__inp" 
+            type="text" name="empresa" 
+            autocomplete="off"
+        >
+    
+        <label class="formulario__lbl" for="contrato">
+            ¿Qué tipo de contrato tiene?
+        </label>
+        <select name="contrato" class="formulario__inp" >
+            <option value="" disabled selected hiden>Seleccione una opción</option>
+            <option value="indefinido">Indefinido</option>
+            <option value="fijo">Fijo</option>
+            <option value="prestacion">Prestación de servicios</option>
+        </select>
+    
+        <label class="formulario__lbl" for="ciudad">
+            ¿Cuál es su ciudad de residencia?
+        </label>
+        <input 
+            class="formulario__inp" 
+            type="text" name="ciudad" 
+            autocomplete="off"
+        >
+    
+
+        <label class="formulario__lbl" for="ciudad">
+            ¿Cuál es su dirección de residencia?
+        </label>
+        <div *ngIf="!addressActivate" class="formulario__inp">
+            <input
+                placeholder="Carrera 9 # 116 -08, Bogotá"
+                type="text" name="ciudad" 
+                autocomplete="off"
+            >
+            <img (click)="addressOn()" src="../../../assets/address_icon.svg" alt="">
+        
+        </div>
+            
+        <div *ngIf="addressActivate" class="direccion">
+            <div class="direccion__items">
+                <select class="formulario__inp">
+                    <option value="calle">Calle</option>
+                    <option value="carrera">Carrera</option>
+                    <option value="Avenida">Avenida</option>
+                </select>
+                <input 
+                class="formulario__inp" 
+                type="number" 
+                autocomplete="off"
+                >
+                #
+                <input 
+                class="formulario__inp" 
+                type="number"
+                autocomplete="off"
+                >
+                -
+                <input 
+                class="formulario__inp" 
+                type="number"
+                autocomplete="off"
+                >
+            </div>
+
+            <label class="formulario__lbl" for="tipohogar">
+                Torre / Piso /Apartamento / Otro:
+            </label>
+            <input 
+                class="formulario__inp" 
+                type="text" name="tipohogar" 
+                autocomplete="off"
+            >
+        </div>
+    
+        <label class="formulario__lbl" for="asesor">
+            Si está recibiendo ayuda de un <span>asesor del Banco</span>, ingrese el código del asesor:
+        </label>
+        <div class="formulario__inp">
+            <input 
+                placeholder="Opcional"
+                type="text" name="asesor" 
+                autocomplete="off"
+            >
+            <img (click)="verTip()" src="../../../assets/tooltip_icon.svg" alt="">
+        </div>
+
+
+        <div *ngIf="tipActivate" class="tooltip">
+            <p>Si le prestaron asesoría, ingrese el código del asesor comercial que lo está ayudando con esta solicitud; de lo contrario, no diligencie este espacio.</p>
+        </div>
+    </div>
+
+
+    <button class="formulario__btn">Continuar</button>
+</form>

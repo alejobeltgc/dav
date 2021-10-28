@@ -1,0 +1,21 @@
+.header{
+    align-items: center;
+    background-color: #DD141D;
+    display: flex;
+    height: 59px;
+    justify-content: space-around;
+    width: 100%;
+
+    &__logo{
+        height: 25px;
+    }
+
+    &__close{
+        background: none;
+        border: none;
+        height: 31px;
+        margin: 0;
+        padding: 0;
+        width: 31px;
+    }
+}

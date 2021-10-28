@@ -1,0 +1,44 @@
+.beneficios{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__card{
+        display: flex;
+        flex-wrap: nowrap;       
+
+        p{
+            color: #575756;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    }
+
+    &__footer{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__disclaimer{
+        color: #575756;
+        font-size: 13px;
+        text-align: center;
+
+        span{
+            font-weight: 700;
+        }
+    }
+
+    &__btn{
+        background-color: #DD141D;
+        border: none;
+        border-radius: 7px;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 700;
+        height: 40px;
+        width: 130px;
+        margin: 30px 0;
+    }
+}

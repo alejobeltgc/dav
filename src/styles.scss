@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import './normalize';
+
+html, body{
+    background-color: #EAEAEA;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    min-width: 375px;
+}
